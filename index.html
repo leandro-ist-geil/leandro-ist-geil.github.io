@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>leandro ist geil</title>
+  <style>
+    body {
+      background: repeating-linear-gradient(
+        45deg,
+        lime,
+        yellow 10px,
+        pink 10px,
+        cyan 20px
+      );
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: red;
+      text-align: center;
+      animation: diddyflash 1s infinite alternate;
+    }
+
+    h1 {
+      font-size: 80px;
+      color: magenta;
+      text-shadow: 5px 5px 0 yellow, -5px -5px 0 cyan;
+      animation: scheisse 0.5s infinite;
+    }
+
+    p {
+      font-size: 30px;
+      color: blue;
+      background-color: lime;
+      padding: 20px;
+      border: 10px dashed orange;
+      transform: rotate(-2deg);
+      animation: mango 1s infinite alternate;
+    }
+
+    .gif-container img {
+      width: 300px;
+      height: auto;
+      border: 5px solid red;
+      box-shadow: 0 0 20px yellow;
+      animation: scheisse 0.5s infinite;
+      margin: 20px 0;
+    }
+
+    .bobo-text {
+      font-size: 40px;
+      font-weight: bold;
+      animation: lgbbq 1s infinite alternate;
+      padding: 10px;
+    }
+
+    .popup-image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 9999;
+    }
+
+    @keyframes scheisse {
+      0% { transform: translate(2px, 1px) rotate(0deg); }
+      25% { transform: translate(-2px, -1px) rotate(-2deg); }
+      50% { transform: translate(1px, -2px) rotate(1deg); }
+      75% { transform: translate(-1px, 2px) rotate(2deg); }
+      100% { transform: translate(1px, 1px) rotate(0deg); }
+    }
+
+    @keyframes mango {
+      0% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
+    @keyframes diddyflash {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    blink {
+      animation: blinker 1s step-start infinite;
+      color: rgb(255, 30, 0);
+    }
+
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+
+    @keyframes lgbbq {
+      0% { color: red; }
+      16% { color: orange; }
+      32% { color: yellow; }
+      48% { color: green; }
+      64% { color: blue; }
+      80% { color: indigo; }
+      100% { color: violet; }
+    }
+  </style>
+</head>
+<body>
+  <h1>kumar</h1>
+  <p>
+    hallo <blink>du chinese</blink> du alien.<br>
+    clark<span style="color: rgb(0, 102, 255); font-size: 40px;">28!</span><br>
+    wow!!!
+  </p>
+
+  <div class="gif-container">
+    <img src="assets/">
+  </div>
+
+  <div class="bobo-text">MADE BY BOBO DAKES</div>
+
+  <img src="assets/" id="popup">
+
+  <audio id="popup-sound" src="assets/"></audio>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const sound = document.getElementById('popup-sound');
+
+    function showPopup() {
+      popup.style.top = Math.random() * 80 + 10 + "%";
+      popup.style.left = Math.random() * 80 + 10 + "%";
+
+      popup.style.opacity = 1;
+      sound.play();
+
+      setTimeout(() => {
+        popup.style.opacity = 0;
+      }, 1500);
+    }
+
+    setInterval(showPopup, Math.random() * 4000 + 3000);
+  </script>
+</body>
+</html>
